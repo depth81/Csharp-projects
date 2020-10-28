@@ -37,5 +37,65 @@ namespace Vista
 
             negocioAddTipoVehiculo = null;
         }
+
+        protected void btnList_Click(object sender, EventArgs e)
+        {
+            //Cuando se le de click al boton "List" debe recibir los datos que neogcio el controlador y despues enviarlos a la grilla (ID=GridView).
+            GridView.DataSource = logicaControladorTipoVehiculo.NegociarSelectTipoVehiculo();
+
+            //Llenar cada columna con su respectivo valor y va llenando los registros.
+            GridView.DataBind();
+
+            //Los que no tengan datos los deja en blanco.
+            txtId.Text = "";
+            txtName.Text = "";
+
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            int carTypeId = Int32.Parse(txtId.Text);
+
+            string typeName = txtName.Text;
+
+            logicaControladorTipoVehiculo negocioUpdateTipoVehiculo = new logicaControladorTipoVehiculo();
+
+            int resultadoUpdateTipoVehiculo = negocioUpdateTipoVehiculo.NegociarUpdateTipoVehiculo(carTypeId, typeName);
+
+            if (resultadoUpdateTipoVehiculo > 0)
+            {
+                lblMensaje.Text = "Registro actualizado";
+            }
+            else
+            {
+                lblMensaje.Text = "No se pudo actualizar";
+            }
+
+            negocioUpdateTipoVehiculo = null;
+
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            int carTypeId = Int32.Parse(txtId.Text);
+
+            logicaControladorTipoVehiculo negocioDeleteTipoVehiculo = new logicaControladorTipoVehiculo();
+
+            int resultadoDeleteTipoVehiculo = negocioDeleteTipoVehiculo.NegociarDeleteTipoVehiculo(carTypeId);
+
+            if (resultadoDeleteTipoVehiculo > 0)
+            {
+                lblMensaje.Text = "Registro eliminado";
+            }
+            else
+            {
+                lblMensaje.Text = "No se pudo eliminar";
+            }
+
+            negocioDeleteTipoVehiculo = null;
+
+        }
     }
 }
