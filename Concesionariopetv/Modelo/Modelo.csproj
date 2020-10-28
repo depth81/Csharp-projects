@@ -48,6 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoVehiculo\AccesoMetodosCRUDtipoVehiculo.cs" />
     <Compile Include="TipoVehiculo\MetodosCRUDtipoVehiculo.cs" />
+    <Compile Include="Vehiculo\AccesoMetodosCRUDVehiculo.cs" />
+    <Compile Include="Vehiculo\MetodosCRUDVehiculo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

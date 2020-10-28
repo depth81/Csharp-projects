@@ -46,6 +46,7 @@ namespace Modelo.TipoVehiculo
 
             //Actualizar un registro en la tabla.
             _comando.Parameters.AddWithValue("@id", id);
+           
             _comando.Parameters.AddWithValue("@nombre", nombre);
 
             return MetodosCRUDtipoVehiculo.EjecutarComandoProcAlmacUpdate_tv(_comando);
