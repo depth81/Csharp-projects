@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#">Contrato</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ruta</a>
+                    <a class="nav-link" href="gestRuta.aspx">Ruta</a>
                 </li>
             </ul>
         </div>
@@ -110,5 +110,6 @@
         </form>
 
     </div> 
+
 </body>
 </html>
