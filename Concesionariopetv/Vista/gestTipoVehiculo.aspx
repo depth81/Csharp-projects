@@ -21,7 +21,7 @@
                     <a class="nav-link" href="gestVehiculo.aspx">Vehiculos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tipo Conductor</a>
+                    <a class="nav-link" href="gestTipoConductor.aspx">Tipo Conductor</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Conductor</a>

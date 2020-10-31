@@ -48,6 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ruta\AccesoMetodosCRUDRuta.cs" />
     <Compile Include="Ruta\MetodosCRUDRuta.cs" />
+    <Compile Include="TipoConductor\AccesoMetodosCRUDtipoConductor.cs" />
+    <Compile Include="TipoConductor\MetodosCRUDtipoConductor.cs" />
     <Compile Include="TipoVehiculo\AccesoMetodosCRUDtipoVehiculo.cs" />
     <Compile Include="TipoVehiculo\MetodosCRUDtipoVehiculo.cs" />
     <Compile Include="Vehiculo\AccesoMetodosCRUDVehiculo.cs" />

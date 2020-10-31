@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ruta\logicaControladorRuta.cs" />
+    <Compile Include="TipoConductor\logicaControladorTipoConductor.cs" />
     <Compile Include="TipoVehiculo\logicaControladorTipoVehiculo.cs" />
     <Compile Include="Vehiculo\logicaControladorVehiculo.cs" />
   </ItemGroup>

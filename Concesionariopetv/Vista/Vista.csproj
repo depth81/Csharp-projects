@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gestRuta.aspx" />
+    <Content Include="gestTipoConductor.aspx" />
     <Content Include="gestTipoVehiculo.aspx" />
     <Content Include="gestVehiculo.aspx" />
     <Content Include="index.html" />
@@ -80,6 +81,13 @@
     </Compile>
     <Compile Include="gestRuta.aspx.designer.cs">
       <DependentUpon>gestRuta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestTipoConductor.aspx.cs">
+      <DependentUpon>gestTipoConductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestTipoConductor.aspx.designer.cs">
+      <DependentUpon>gestTipoConductor.aspx</DependentUpon>
     </Compile>
     <Compile Include="gestTipoVehiculo.aspx.cs">
       <DependentUpon>gestTipoVehiculo.aspx</DependentUpon>
