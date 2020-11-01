@@ -14,8 +14,7 @@ namespace Vista
         {
 
         }
-
-     
+             
         protected void btnAdd_Click1(object sender, EventArgs e)
         {
             int carTypeId = Int32.Parse(txtId.Text);

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Concesionario</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 </head>
 <body>
 
@@ -25,7 +25,7 @@
                     <a class="nav-link" href="gestTipoConductor.aspx">Tipo Conductor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Conductor</a>
+                    <a class="nav-link" href="gestConductor.aspx">Conductor</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contrato</a>

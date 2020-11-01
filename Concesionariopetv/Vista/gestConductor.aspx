@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gestRuta.aspx.cs" Inherits="Vista.gestRuta" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gestConductor.aspx.cs" Inherits="Vista.gestConductor" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 </head>
 <body>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Concesionario</a>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,18 +39,23 @@
 
     <div class="container">
         <br />
-        <h1>Gestión de rutas</h1>
+        <h1>Gestión de conductores</h1>
         <br />
 
         <form id="form1" runat="server">
             <div class="form-group">
-                <label for="txtidRuta">idRuta</label>
-                <asp:TextBox ID="txtidRuta" runat="server" class="form-control"></asp:TextBox>
+                <label for="txtidcond">idConductor</label>
+                <asp:TextBox ID="txtidcond" runat="server" class="form-control"></asp:TextBox>
             </div>
 
             <div class="form-group">
-                <label for="txtEstacion">Estacion</label>
-                <asp:TextBox ID="txtEstacion" runat="server" class="form-control"></asp:TextBox>
+                <label for="txtnombre">Nombre</label>
+                <asp:TextBox ID="txtnombre" runat="server" class="form-control"></asp:TextBox>
+            </div>
+            
+            <div class="form-group">
+                <label for="txttipoLicencia">TipoLicencia</label>
+                <asp:TextBox ID="txttipoLicencia" runat="server" class="form-control"></asp:TextBox>
             </div>
 
             <div class="form-group">
@@ -57,14 +63,19 @@
                 <asp:TextBox ID="txtidVehiculo" runat="server" class="form-control"></asp:TextBox>
             </div>
 
+            <div class="form-group">
+                <label for="txtidTipoConductor">idTipoConductor</label>
+                <asp:TextBox ID="txtidTipoConductor" runat="server" class="form-control"></asp:TextBox>
+            </div>
+
             <div class="form-row">
                 <div class="col-8">
-                    <asp:Button ID="btnAdd" runat="server" Text="Add" class="btn btn-primary" OnClick="btnAdd_Click" />
+                    <asp:Button ID="btnAdd" runat="server" Text="Add" class="btn btn-primary" OnClick="btnAdd_Click"  />
                 </div>
                 <div class="col-4 text-right">
-                    <asp:Button ID="btnList" runat="server" Text="List" class="btn btn-primary" OnClick="btnList_Click" />
-                    <asp:Button ID="btnUpdate" runat="server" Text="Update" class="btn btn-primary" OnClick="btnUpdate_Click" />
-                    <asp:Button ID="btnDelete" runat="server" Text="Delete" class="btn btn-primary" OnClick="btnDelete_Click" />
+                    <asp:Button ID="btnList" runat="server" Text="List" class="btn btn-primary" OnClick="btnList_Click"  />
+                    <asp:Button ID="btnUpdate" runat="server" Text="Update" class="btn btn-primary" OnClick="btnUpdate_Click"  />
+                    <asp:Button ID="btnDelete" runat="server" Text="Delete" class="btn btn-primary" OnClick="btnDelete_Click"  />
                 </div>
             </div>
 
@@ -79,9 +90,11 @@
                     <th>
                         <asp:GridView ID="GridView" runat="server" AutoGenerateColumns="false">
                             <Columns>
-                                <asp:BoundField DataField="idRuta" HeaderText="idRuta" />
-                                <asp:BoundField DataField="estacion" HeaderText="estacion" />
+                                <asp:BoundField DataField="idcond" HeaderText="idConductor" />
+                                <asp:BoundField DataField="nombre" HeaderText="Nombre" />
+                                <asp:BoundField DataField="tipoLicencia" HeaderText="TipoLicencia" />
                                 <asp:BoundField DataField="idVehiculo" HeaderText="idVehiculo" />
+                                <asp:BoundField DataField="idTipoConductor" HeaderText="idTipoConductor" />
                             </Columns>
                         </asp:GridView>
                     </th>
@@ -90,7 +103,7 @@
 
         </form>
 
-    </div>    
+    </div> 
 
 
 

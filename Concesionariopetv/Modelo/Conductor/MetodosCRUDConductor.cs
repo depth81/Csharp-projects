@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelo.Vehiculo
+namespace Modelo.Conductor
 {
-    public class MetodosCRUDVehiculo
+    public class MetodosCRUDConductor
     {
 
         //Crear tipo comando INSERT
-        public static SqlCommand CrearComandoProcAlmacInsert_ve()
+        public static SqlCommand CrearComandoProcAlmacInsert_cond()
         {
 
             //Conectarse a la BD. Método estático. NO necesito instanciar la clase previamente para usarlo.
@@ -20,7 +20,7 @@ namespace Modelo.Vehiculo
 
             SqlConnection _conexion = new SqlConnection(_cadenaConexion);
 
-            SqlCommand _comando = new SqlCommand("addVehiculo", _conexion);
+            SqlCommand _comando = new SqlCommand("addConductor", _conexion);
 
             _comando.CommandType = CommandType.StoredProcedure;
 
@@ -29,7 +29,7 @@ namespace Modelo.Vehiculo
         }
 
         //Ejecutar el tipo de comando INSERT
-        public static int EjecutarComandoProcAlmacInsert_ve(SqlCommand comando)
+        public static int EjecutarComandoProcAlmacInsert_cond(SqlCommand comando)
         {
 
             try
@@ -58,7 +58,7 @@ namespace Modelo.Vehiculo
         }
 
         //Crear tipo comando SELECT
-        public static SqlCommand CrearComandoSelect_ve()
+        public static SqlCommand CrearComandoSelect_cond()
         {
 
             //Conectarse a la BD. Método estático. NO necesito instanciar la clase previamente para usarlo.
@@ -80,7 +80,7 @@ namespace Modelo.Vehiculo
         }
 
         //Ejecutar el tipo de comando SELECT
-        public static DataTable EjecutarComandoSelect_ve(SqlCommand comando)
+        public static DataTable EjecutarComandoSelect_cond(SqlCommand comando)
         {
 
             DataTable _table = new DataTable();
@@ -108,7 +108,7 @@ namespace Modelo.Vehiculo
         }
 
         //Crear tipo comando UPDATE
-        public static SqlCommand CrearComandoProcAlmacUpdate_ve()
+        public static SqlCommand CrearComandoProcAlmacUpdate_cond()
         {
 
             //Conectarse a la BD. Método estático. NO necesito instanciar la clase previamente para usarlo.
@@ -116,7 +116,7 @@ namespace Modelo.Vehiculo
 
             SqlConnection _conexion = new SqlConnection(_cadenaConexion);
 
-            SqlCommand _comando = new SqlCommand("updateVehiculo", _conexion);
+            SqlCommand _comando = new SqlCommand("updateConductor", _conexion);
 
             _comando.CommandType = CommandType.StoredProcedure;
 
@@ -125,7 +125,7 @@ namespace Modelo.Vehiculo
         }
 
         //Ejecutar el tipo de comando UPDATE
-        public static int EjecutarComandoProcAlmacUpdate_ve(SqlCommand comando)
+        public static int EjecutarComandoProcAlmacUpdate_cond(SqlCommand comando)
         {
 
             try
@@ -150,7 +150,7 @@ namespace Modelo.Vehiculo
         }
 
         //Crear tipo comando DELETE
-        public static SqlCommand CrearComandoProcAlmacDelete_ve()
+        public static SqlCommand CrearComandoProcAlmacDelete_cond()
         {
 
             //Conectarse a la BD. Método estático. NO necesito instanciar la clase previamente para usarlo.
@@ -158,7 +158,7 @@ namespace Modelo.Vehiculo
 
             SqlConnection _conexion = new SqlConnection(_cadenaConexion);
 
-            SqlCommand _comando = new SqlCommand("deleteVehiculo", _conexion);
+            SqlCommand _comando = new SqlCommand("deleteConductor", _conexion);
 
             _comando.CommandType = CommandType.StoredProcedure;
 
@@ -167,7 +167,7 @@ namespace Modelo.Vehiculo
         }
 
         //Ejecutar el tipo de comando DELETE
-        public static int EjecutarComandoProcAlmacDelete_ve(SqlCommand comando)
+        public static int EjecutarComandoProcAlmacDelete_cond(SqlCommand comando)
         {
 
             try
@@ -190,7 +190,6 @@ namespace Modelo.Vehiculo
             }
 
         }
-
 
     }
 }

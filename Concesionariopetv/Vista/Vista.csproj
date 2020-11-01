@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="gestConductor.aspx" />
     <Content Include="gestRuta.aspx" />
     <Content Include="gestTipoConductor.aspx" />
     <Content Include="gestTipoVehiculo.aspx" />
@@ -75,6 +76,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gestConductor.aspx.cs">
+      <DependentUpon>gestConductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestConductor.aspx.designer.cs">
+      <DependentUpon>gestConductor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="gestRuta.aspx.cs">
       <DependentUpon>gestRuta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
