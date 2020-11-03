@@ -28,7 +28,7 @@
                     <a class="nav-link" href="gestConductor.aspx">Conductor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contrato</a>
+                    <a class="nav-link" href="gestContrato.aspx">Contrato</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="gestRuta.aspx">Ruta</a>

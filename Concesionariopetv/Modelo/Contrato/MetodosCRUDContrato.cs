@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelo.Ruta
+namespace Modelo.Contrato
 {
-    public class MetodosCRUDRuta
+    public class MetodosCRUDContrato
     {
 
         //Crear tipo comando INSERT
-        public static SqlCommand CrearComandoProcAlmacInsert_ruta()
+        public static SqlCommand CrearComandoProcAlmacInsert_contrato()
         {
 
             //Conectarse a la BD. Método estático. NO necesito instanciar la clase previamente para usarlo.
@@ -20,7 +20,7 @@ namespace Modelo.Ruta
 
             SqlConnection _conexion = new SqlConnection(_cadenaConexion);
 
-            SqlCommand _comando = new SqlCommand("addruta", _conexion);
+            SqlCommand _comando = new SqlCommand("addContrato", _conexion);
 
             _comando.CommandType = CommandType.StoredProcedure;
 
@@ -29,7 +29,7 @@ namespace Modelo.Ruta
         }
 
         //Ejecutar el tipo de comando INSERT
-        public static int EjecutarComandoProcAlmacInsert_ruta(SqlCommand comando)
+        public static int EjecutarComandoProcAlmacInsert_contrato(SqlCommand comando)
         {
 
             try
@@ -58,7 +58,7 @@ namespace Modelo.Ruta
         }
 
         //Crear tipo comando SELECT
-        public static SqlCommand CrearComandoSelect_ruta()
+        public static SqlCommand CrearComandoSelect_contrato()
         {
 
             //Conectarse a la BD. Método estático. NO necesito instanciar la clase previamente para usarlo.
@@ -80,7 +80,7 @@ namespace Modelo.Ruta
         }
 
         //Ejecutar el tipo de comando SELECT
-        public static DataTable EjecutarComandoSelect_ruta(SqlCommand comando)
+        public static DataTable EjecutarComandoSelect_contrato(SqlCommand comando)
         {
 
             DataTable _table = new DataTable();
@@ -108,7 +108,7 @@ namespace Modelo.Ruta
         }
 
         //Crear tipo comando UPDATE
-        public static SqlCommand CrearComandoProcAlmacUpdate_ruta()
+        public static SqlCommand CrearComandoProcAlmacUpdate_contrato()
         {
 
             //Conectarse a la BD. Método estático. NO necesito instanciar la clase previamente para usarlo.
@@ -116,7 +116,7 @@ namespace Modelo.Ruta
 
             SqlConnection _conexion = new SqlConnection(_cadenaConexion);
 
-            SqlCommand _comando = new SqlCommand("updateRuta", _conexion);
+            SqlCommand _comando = new SqlCommand("updateContrato", _conexion);
 
             _comando.CommandType = CommandType.StoredProcedure;
 
@@ -125,7 +125,7 @@ namespace Modelo.Ruta
         }
 
         //Ejecutar el tipo de comando UPDATE
-        public static int EjecutarComandoProcAlmacUpdate_ruta(SqlCommand comando)
+        public static int EjecutarComandoProcAlmacUpdate_contrato(SqlCommand comando)
         {
 
             try
@@ -150,7 +150,7 @@ namespace Modelo.Ruta
         }
 
         //Crear tipo comando DELETE
-        public static SqlCommand CrearComandoProcAlmacDelete_ruta()
+        public static SqlCommand CrearComandoProcAlmacDelete_contrato()
         {
 
             //Conectarse a la BD. Método estático. NO necesito instanciar la clase previamente para usarlo.
@@ -158,7 +158,7 @@ namespace Modelo.Ruta
 
             SqlConnection _conexion = new SqlConnection(_cadenaConexion);
 
-            SqlCommand _comando = new SqlCommand("deleteRuta", _conexion);
+            SqlCommand _comando = new SqlCommand("deleteContrato", _conexion);
 
             _comando.CommandType = CommandType.StoredProcedure;
 
@@ -167,7 +167,7 @@ namespace Modelo.Ruta
         }
 
         //Ejecutar el tipo de comando DELETE
-        public static int EjecutarComandoProcAlmacDelete_ruta(SqlCommand comando)
+        public static int EjecutarComandoProcAlmacDelete_contrato(SqlCommand comando)
         {
 
             try
