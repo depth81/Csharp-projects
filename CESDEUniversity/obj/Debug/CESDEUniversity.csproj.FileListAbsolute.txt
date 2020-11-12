@@ -77,3 +77,7 @@ C:\Users\casa\source\repos\CESDEUniversity\obj\Debug\CESDEUniversity.csproj.Core
 C:\Users\casa\source\repos\CESDEUniversity\obj\Debug\CESDEUniversity.csproj.CopyComplete
 C:\Users\casa\source\repos\CESDEUniversity\obj\Debug\CESDEUniversity.dll
 C:\Users\casa\source\repos\CESDEUniversity\obj\Debug\CESDEUniversity.pdb
+C:\Users\casa\source\repos\CESDEUniversity\bin\EntityFramework.dll
+C:\Users\casa\source\repos\CESDEUniversity\bin\EntityFramework.SqlServer.dll
+C:\Users\casa\source\repos\CESDEUniversity\bin\EntityFramework.xml
+C:\Users\casa\source\repos\CESDEUniversity\bin\EntityFramework.SqlServer.xml
