@@ -6,7 +6,7 @@ namespace CESDEUniversity.Models
 {
     public class Course
     {
-
+        //Introducir la clave primaria manualmente y que no la genere la BD (autoinceremnt)
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         
         public int CourseID { get; set; }

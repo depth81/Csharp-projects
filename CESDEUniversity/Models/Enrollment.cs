@@ -4,13 +4,14 @@
     public enum Grade
     {
 
-        A, B, C, D, E
+        A, B, C, D, F
 
     }
 
     public class Enrollment
     {
-
+        
+        //El ID se va a generar automaticamente (autoincrement) en la BD
         public int EnrollmentID { get; set; }
 
         public int CourseID { get; set; }
