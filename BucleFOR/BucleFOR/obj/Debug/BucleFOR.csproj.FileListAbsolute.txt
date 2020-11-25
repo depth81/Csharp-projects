@@ -1,0 +1,6 @@
+C:\Users\p84029437\source\repos\BucleFOR\BucleFOR\bin\Debug\BucleFOR.exe.config
+C:\Users\p84029437\source\repos\BucleFOR\BucleFOR\bin\Debug\BucleFOR.exe
+C:\Users\p84029437\source\repos\BucleFOR\BucleFOR\bin\Debug\BucleFOR.pdb
+C:\Users\p84029437\source\repos\BucleFOR\BucleFOR\obj\Debug\BucleFOR.csproj.CoreCompileInputs.cache
+C:\Users\p84029437\source\repos\BucleFOR\BucleFOR\obj\Debug\BucleFOR.exe
+C:\Users\p84029437\source\repos\BucleFOR\BucleFOR\obj\Debug\BucleFOR.pdb

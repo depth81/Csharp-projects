@@ -1,0 +1,7 @@
+C:\Users\p84029437\source\repos\Condicional_IF\Condicional_IF\bin\Debug\Condicional_IF.exe.config
+C:\Users\p84029437\source\repos\Condicional_IF\Condicional_IF\bin\Debug\Condicional_IF.exe
+C:\Users\p84029437\source\repos\Condicional_IF\Condicional_IF\bin\Debug\Condicional_IF.pdb
+C:\Users\p84029437\source\repos\Condicional_IF\Condicional_IF\obj\Debug\Condicional_IF.csprojAssemblyReference.cache
+C:\Users\p84029437\source\repos\Condicional_IF\Condicional_IF\obj\Debug\Condicional_IF.csproj.CoreCompileInputs.cache
+C:\Users\p84029437\source\repos\Condicional_IF\Condicional_IF\obj\Debug\Condicional_IF.exe
+C:\Users\p84029437\source\repos\Condicional_IF\Condicional_IF\obj\Debug\Condicional_IF.pdb

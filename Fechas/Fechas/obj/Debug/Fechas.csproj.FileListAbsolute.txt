@@ -1,0 +1,6 @@
+C:\Users\p84029437\source\repos\Fechas\Fechas\bin\Debug\Fechas.exe.config
+C:\Users\p84029437\source\repos\Fechas\Fechas\bin\Debug\Fechas.exe
+C:\Users\p84029437\source\repos\Fechas\Fechas\bin\Debug\Fechas.pdb
+C:\Users\p84029437\source\repos\Fechas\Fechas\obj\Debug\Fechas.csproj.CoreCompileInputs.cache
+C:\Users\p84029437\source\repos\Fechas\Fechas\obj\Debug\Fechas.exe
+C:\Users\p84029437\source\repos\Fechas\Fechas\obj\Debug\Fechas.pdb

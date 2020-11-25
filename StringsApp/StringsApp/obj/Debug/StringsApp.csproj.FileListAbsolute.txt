@@ -1,0 +1,7 @@
+C:\Users\p84029437\source\repos\StringsApp\StringsApp\bin\Debug\StringsApp.exe.config
+C:\Users\p84029437\source\repos\StringsApp\StringsApp\bin\Debug\StringsApp.exe
+C:\Users\p84029437\source\repos\StringsApp\StringsApp\bin\Debug\StringsApp.pdb
+C:\Users\p84029437\source\repos\StringsApp\StringsApp\obj\Debug\StringsApp.csprojAssemblyReference.cache
+C:\Users\p84029437\source\repos\StringsApp\StringsApp\obj\Debug\StringsApp.csproj.CoreCompileInputs.cache
+C:\Users\p84029437\source\repos\StringsApp\StringsApp\obj\Debug\StringsApp.exe
+C:\Users\p84029437\source\repos\StringsApp\StringsApp\obj\Debug\StringsApp.pdb

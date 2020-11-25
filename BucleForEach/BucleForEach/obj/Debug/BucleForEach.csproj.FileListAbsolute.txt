@@ -1,0 +1,7 @@
+C:\Users\p84029437\source\repos\BucleForEach\BucleForEach\bin\Debug\BucleForEach.exe.config
+C:\Users\p84029437\source\repos\BucleForEach\BucleForEach\bin\Debug\BucleForEach.exe
+C:\Users\p84029437\source\repos\BucleForEach\BucleForEach\bin\Debug\BucleForEach.pdb
+C:\Users\p84029437\source\repos\BucleForEach\BucleForEach\obj\Debug\BucleForEach.csprojAssemblyReference.cache
+C:\Users\p84029437\source\repos\BucleForEach\BucleForEach\obj\Debug\BucleForEach.csproj.CoreCompileInputs.cache
+C:\Users\p84029437\source\repos\BucleForEach\BucleForEach\obj\Debug\BucleForEach.exe
+C:\Users\p84029437\source\repos\BucleForEach\BucleForEach\obj\Debug\BucleForEach.pdb
