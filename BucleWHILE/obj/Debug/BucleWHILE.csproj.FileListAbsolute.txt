@@ -1,0 +1,7 @@
+C:\Users\p84029437\source\repos\BucleWHILE\bin\Debug\BucleWHILE.exe.config
+C:\Users\p84029437\source\repos\BucleWHILE\bin\Debug\BucleWHILE.exe
+C:\Users\p84029437\source\repos\BucleWHILE\bin\Debug\BucleWHILE.pdb
+C:\Users\p84029437\source\repos\BucleWHILE\obj\Debug\BucleWHILE.csprojAssemblyReference.cache
+C:\Users\p84029437\source\repos\BucleWHILE\obj\Debug\BucleWHILE.csproj.CoreCompileInputs.cache
+C:\Users\p84029437\source\repos\BucleWHILE\obj\Debug\BucleWHILE.exe
+C:\Users\p84029437\source\repos\BucleWHILE\obj\Debug\BucleWHILE.pdb
