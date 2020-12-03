@@ -22,8 +22,9 @@ namespace MusicStore.Models
         
         public String ProductDescr { get; set; }
         
-        public String Picture { get; set; }
-        
+        //public String Picture { get; set; }
+        public byte[] Picture { get; set; }
+
         public Category? Category { get; set; }
         
         public virtual ICollection<Order> Orders { get; set; }

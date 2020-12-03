@@ -23,21 +23,6 @@ namespace MusicStore.DAL
             customers.ForEach(s => context.Customers.Add(s));
             context.SaveChanges();
 
-
-            var products = new List<Product>
-            {
-            new Product{ProductID=20,ProductName ="Piano Keyboard",ProductDescr="Yamaha Keyboard",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/piano.jpg?raw=true", Category=Category.pianos},
-            new Product{ProductID=30,ProductName="Electric Guitar",ProductDescr="Gibson Classic",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/electricguitar.jpg?raw=true", Category=Category.guitars},
-            new Product{ProductID=40,ProductName="Electric Bass",ProductDescr="Fender Bass",Picture ="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/bass.jpg?raw=true",Category=Category.basses},
-            new Product{ProductID=50,ProductName="Drum set",ProductDescr="Mapex",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/drums.jpg?raw=true", Category=Category.percussion},
-            new Product{ProductID=60,ProductName="Guitar amp",ProductDescr="Marshall DSL40C",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/marshall.jpg?raw=true", Category=Category.amps},
-            new Product{ProductID=70,ProductName="Classical Trumpet",ProductDescr="Bach 180 series",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/trumpet.jpg?raw=true", Category=Category.trumpet},
-            new Product{ProductID=80,ProductName="Musical Book",ProductDescr="complete music theory",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/MusicBook.jpg?raw=true", Category=Category.books}
-            };
-            products.ForEach(s => context.Products.Add(s));
-            context.SaveChanges();
-
-
             var orders = new List<Order>
             {
                 new Order{ CustomerID=1050, ProductID=80, OrderNumber=123, OrderDate=DateTime.Parse("2005-09-01")},
@@ -50,6 +35,23 @@ namespace MusicStore.DAL
             };
             orders.ForEach(s => context.Orders.Add(s));
             context.SaveChanges();
+
+
+            //var products = new List<Product>
+            //{
+            //new Product{ProductID=20,ProductName ="Piano Keyboard",ProductDescr="Yamaha Keyboard",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/piano.jpg?raw=true", Category=Category.pianos},
+            //new Product{ProductID=30,ProductName="Electric Guitar",ProductDescr="Gibson Classic",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/electricguitar.jpg?raw=true", Category=Category.guitars},
+            //new Product{ProductID=40,ProductName="Electric Bass",ProductDescr="Fender Bass",Picture ="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/bass.jpg?raw=true",Category=Category.basses},
+            //new Product{ProductID=50,ProductName="Drum set",ProductDescr="Mapex",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/drums.jpg?raw=true", Category=Category.percussion},
+            //new Product{ProductID=60,ProductName="Guitar amp",ProductDescr="Marshall DSL40C",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/marshall.jpg?raw=true", Category=Category.amps},
+            //new Product{ProductID=70,ProductName="Classical Trumpet",ProductDescr="Bach 180 series",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/trumpet.jpg?raw=true", Category=Category.trumpet},
+            //new Product{ProductID=80,ProductName="Musical Book",ProductDescr="complete music theory",Picture="https://github.com/depth81/img_M3_lengDeProg_CSharp/blob/main/MusicBook.jpg?raw=true", Category=Category.books}
+
+            //};
+
+            //products.ForEach(s => context.Products.Add(s));
+            //context.SaveChanges();
+
 
         }
     }

@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using MusicStore.DAL;
 using MusicStore.Models;
+
+
 
 namespace MusicStore.Controllers
 {
@@ -19,6 +25,12 @@ namespace MusicStore.Controllers
         public ActionResult Index()
         {
             return View(db.Products.ToList());
+        }
+
+        public ActionResult convertImage(int id)
+        {
+            var prodPic = db.Products.Where(x => x.ProductID == id).FirstOrDefault();
+            return File(prodPic.Picture, "image/jpeg");
         }
 
         // GET: Product/Details/5
@@ -47,10 +59,26 @@ namespace MusicStore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,ProductName,ProductDescr,Picture,Category")] Product product)
+        public ActionResult Create([Bind(Include = "ProductID,ProductName,ProductDescr,Category")] Product product, HttpPostedFileBase upload)
         {
+
+            if (upload != null && upload.ContentLength > 0)
+            {
+
+                byte[] imagenData = null;
+
+                using (var imagen = new BinaryReader(upload.InputStream))
+                {
+                    imagenData = imagen.ReadBytes(upload.ContentLength);
+                }
+
+                product.Picture = imagenData;
+
+            }
+
             if (ModelState.IsValid)
             {
+
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -79,8 +107,23 @@ namespace MusicStore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductID,ProductName,ProductDescr,Picture,Category")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductID,ProductName,ProductDescr,Category")] Product product, HttpPostedFileBase upload)
         {
+
+            if (upload != null && upload.ContentLength > 0)
+            {
+
+                byte[] imagenData = null;
+
+                using (var imagen = new BinaryReader(upload.InputStream))
+                {
+                    imagenData = imagen.ReadBytes(upload.ContentLength);
+                }
+
+                product.Picture = imagenData;
+
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entry(product).State = EntityState.Modified;
@@ -124,5 +167,7 @@ namespace MusicStore.Controllers
             }
             base.Dispose(disposing);
         }
+
+      
     }
 }
