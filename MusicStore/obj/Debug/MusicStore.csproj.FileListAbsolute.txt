@@ -163,3 +163,4 @@ D:\CESDE\2020-02\Lenguaje de Programación\MusicStore\obj\Debug\MusicStore.cspro
 D:\CESDE\2020-02\Lenguaje de Programación\MusicStore\obj\Debug\MusicStore.dll
 D:\CESDE\2020-02\Lenguaje de Programación\MusicStore\obj\Debug\MusicStore.pdb
 D:\CESDE\2020-02\Lenguaje de Programación\MusicStore\obj\Debug\MusicStore.csprojAssemblyReference.cache
+C:\Users\p84029437\source\repos\MusicStore\obj\Debug\MusicStore.csprojAssemblyReference.cache
