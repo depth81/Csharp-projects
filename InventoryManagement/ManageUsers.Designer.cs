@@ -43,6 +43,7 @@ namespace InventoryManagement
             this.button4 = new System.Windows.Forms.Button();
             this.UsersGv = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsersGv)).BeginInit();
             this.SuspendLayout();
@@ -97,7 +98,7 @@ namespace InventoryManagement
             // 
             this.UnameTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.UnameTb.ForeColor = System.Drawing.Color.Crimson;
-            this.UnameTb.Location = new System.Drawing.Point(35, 143);
+            this.UnameTb.Location = new System.Drawing.Point(22, 181);
             this.UnameTb.Name = "UnameTb";
             this.UnameTb.Size = new System.Drawing.Size(269, 27);
             this.UnameTb.TabIndex = 1;
@@ -108,7 +109,7 @@ namespace InventoryManagement
             // 
             this.FnameTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.FnameTb.ForeColor = System.Drawing.Color.Crimson;
-            this.FnameTb.Location = new System.Drawing.Point(35, 193);
+            this.FnameTb.Location = new System.Drawing.Point(22, 231);
             this.FnameTb.Name = "FnameTb";
             this.FnameTb.Size = new System.Drawing.Size(269, 27);
             this.FnameTb.TabIndex = 2;
@@ -118,7 +119,7 @@ namespace InventoryManagement
             // 
             this.PasswordTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.PasswordTb.ForeColor = System.Drawing.Color.Crimson;
-            this.PasswordTb.Location = new System.Drawing.Point(35, 241);
+            this.PasswordTb.Location = new System.Drawing.Point(22, 279);
             this.PasswordTb.Name = "PasswordTb";
             this.PasswordTb.Size = new System.Drawing.Size(269, 27);
             this.PasswordTb.TabIndex = 3;
@@ -128,7 +129,7 @@ namespace InventoryManagement
             // 
             this.PhoneTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.PhoneTb.ForeColor = System.Drawing.Color.Crimson;
-            this.PhoneTb.Location = new System.Drawing.Point(35, 288);
+            this.PhoneTb.Location = new System.Drawing.Point(22, 326);
             this.PhoneTb.Name = "PhoneTb";
             this.PhoneTb.Size = new System.Drawing.Size(269, 27);
             this.PhoneTb.TabIndex = 4;
@@ -161,6 +162,7 @@ namespace InventoryManagement
             this.button2.TabIndex = 6;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -194,11 +196,12 @@ namespace InventoryManagement
             this.UsersGv.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.UsersGv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.UsersGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UsersGv.Location = new System.Drawing.Point(322, 143);
+            this.UsersGv.Location = new System.Drawing.Point(322, 181);
             this.UsersGv.Name = "UsersGv";
             this.UsersGv.RowTemplate.Height = 25;
-            this.UsersGv.Size = new System.Drawing.Size(343, 385);
+            this.UsersGv.Size = new System.Drawing.Size(334, 347);
             this.UsersGv.TabIndex = 9;
+            this.UsersGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersGv_CellContentClick);
             this.UsersGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersGv_CellContentClick);
             // 
             // panel2
@@ -210,11 +213,23 @@ namespace InventoryManagement
             this.panel2.Size = new System.Drawing.Size(677, 21);
             this.panel2.TabIndex = 10;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Location = new System.Drawing.Point(416, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "USERS LIST";
+            // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 580);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.UsersGv);
             this.Controls.Add(this.button4);
@@ -249,7 +264,6 @@ namespace InventoryManagement
         private System.Windows.Forms.TextBox PasswordTb;
         private System.Windows.Forms.TextBox PhoneTb;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -257,5 +271,7 @@ namespace InventoryManagement
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox UnameTb;
         private System.Windows.Forms.DataGridView UsersGv;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
     }
 }
