@@ -43,8 +43,20 @@ namespace InventoryManagement
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -139,10 +151,10 @@ namespace InventoryManagement
             this.CustomersGv.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.CustomersGv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.CustomersGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomersGv.Location = new System.Drawing.Point(306, 150);
+            this.CustomersGv.Location = new System.Drawing.Point(301, 150);
             this.CustomersGv.Name = "CustomersGv";
             this.CustomersGv.RowTemplate.Height = 25;
-            this.CustomersGv.Size = new System.Drawing.Size(334, 347);
+            this.CustomersGv.Size = new System.Drawing.Size(339, 272);
             this.CustomersGv.TabIndex = 13;
             this.CustomersGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomersGv_CellContentClick);
             this.CustomersGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomersGv_CellContentClick);
@@ -154,7 +166,7 @@ namespace InventoryManagement
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(31, 462);
+            this.button4.Location = new System.Drawing.Point(17, 367);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 36);
             this.button4.TabIndex = 17;
@@ -167,7 +179,7 @@ namespace InventoryManagement
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(126, 462);
+            this.button3.Location = new System.Drawing.Point(112, 367);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(82, 36);
             this.button3.TabIndex = 16;
@@ -181,7 +193,7 @@ namespace InventoryManagement
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(126, 408);
+            this.button2.Location = new System.Drawing.Point(112, 313);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(82, 36);
             this.button2.TabIndex = 15;
@@ -195,7 +207,7 @@ namespace InventoryManagement
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(31, 408);
+            this.button1.Location = new System.Drawing.Point(17, 313);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 36);
             this.button1.TabIndex = 14;
@@ -212,11 +224,110 @@ namespace InventoryManagement
             this.panel2.Size = new System.Drawing.Size(661, 21);
             this.panel2.TabIndex = 18;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Violet;
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Location = new System.Drawing.Point(17, 428);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(163, 76);
+            this.panel3.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(21, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 19);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Orders Count";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(45, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 23);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Orders";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Location = new System.Drawing.Point(301, 428);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(165, 76);
+            this.panel4.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(49, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 23);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Amount";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.Location = new System.Drawing.Point(18, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 19);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Orders Amount";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Location = new System.Drawing.Point(475, 428);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(165, 76);
+            this.panel5.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label9.Location = new System.Drawing.Point(49, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 23);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Date";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label10.Location = new System.Drawing.Point(18, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 19);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Last Order Date";
+            // 
             // ManageCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 541);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -236,6 +347,12 @@ namespace InventoryManagement
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +374,14 @@ namespace InventoryManagement
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

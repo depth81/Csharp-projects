@@ -142,7 +142,7 @@ namespace InventoryManagement
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(41, 430);
+            this.button1.Location = new System.Drawing.Point(22, 426);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 36);
             this.button1.TabIndex = 5;
@@ -156,7 +156,7 @@ namespace InventoryManagement
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(136, 430);
+            this.button2.Location = new System.Drawing.Point(117, 426);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(82, 36);
             this.button2.TabIndex = 6;
@@ -170,7 +170,7 @@ namespace InventoryManagement
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(136, 484);
+            this.button3.Location = new System.Drawing.Point(117, 480);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(82, 36);
             this.button3.TabIndex = 7;
@@ -184,7 +184,7 @@ namespace InventoryManagement
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(41, 484);
+            this.button4.Location = new System.Drawing.Point(22, 480);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 36);
             this.button4.TabIndex = 8;
@@ -217,8 +217,8 @@ namespace InventoryManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(416, 143);
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(430, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 25);
             this.label4.TabIndex = 11;
