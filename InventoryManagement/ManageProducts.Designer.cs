@@ -45,6 +45,10 @@ namespace InventoryManagement
             this.button1 = new System.Windows.Forms.Button();
             this.ProductsGv = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.SearchCombo = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGv)).BeginInit();
             this.SuspendLayout();
@@ -217,10 +221,10 @@ namespace InventoryManagement
             this.ProductsGv.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.ProductsGv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ProductsGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductsGv.Location = new System.Drawing.Point(310, 141);
+            this.ProductsGv.Location = new System.Drawing.Point(303, 183);
             this.ProductsGv.Name = "ProductsGv";
             this.ProductsGv.RowTemplate.Height = 25;
-            this.ProductsGv.Size = new System.Drawing.Size(339, 374);
+            this.ProductsGv.Size = new System.Drawing.Size(346, 331);
             this.ProductsGv.TabIndex = 16;
             this.ProductsGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGv_CellContentClick);
             this.ProductsGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGv_CellContentClick);
@@ -230,17 +234,71 @@ namespace InventoryManagement
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(399, 113);
+            this.label4.Location = new System.Drawing.Point(396, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(160, 25);
             this.label4.TabIndex = 15;
             this.label4.Text = "PRODUCTS LIST";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // SearchCombo
+            // 
+            this.SearchCombo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SearchCombo.ForeColor = System.Drawing.Color.Crimson;
+            this.SearchCombo.FormattingEnabled = true;
+            this.SearchCombo.Location = new System.Drawing.Point(322, 146);
+            this.SearchCombo.Name = "SearchCombo";
+            this.SearchCombo.Size = new System.Drawing.Size(160, 27);
+            this.SearchCombo.TabIndex = 17;
+            this.SearchCombo.Text = "SelectCategory";
+            this.SearchCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Crimson;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(497, 146);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(70, 35);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Search";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Crimson;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(573, 146);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(76, 35);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "Refresh";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Crimson;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 520);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(661, 21);
+            this.panel2.TabIndex = 20;
             // 
             // ManageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 541);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.SearchCombo);
             this.Controls.Add(this.ProductsGv);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
@@ -285,5 +343,9 @@ namespace InventoryManagement
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView ProductsGv;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox SearchCombo;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel2;
     }
 }

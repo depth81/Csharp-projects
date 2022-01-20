@@ -16,7 +16,6 @@ namespace InventoryManagement
             InitializeComponent();
         }
 
-
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\casa\Inventorydb.mdf;Integrated Security=True; Connect Timeout=30");
 
         void fillCategory()
@@ -33,6 +32,32 @@ namespace InventoryManagement
                 dt.Load(rdr);
                 CatCombo.ValueMember = "CatName";
                 CatCombo.DataSource = dt;
+                SearchCombo.ValueMember = "CatName";
+                SearchCombo.DataSource = dt;
+                Con.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
+        void fillSearchCombo()
+        {
+            string query = "SELECT * FROM CategoryTbl where CatName = '" + SearchCombo.SelectedValue.ToString() + "'";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            SqlDataReader rdr;
+            try
+            {
+                Con.Open();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("CatName", typeof(string));
+                rdr = cmd.ExecuteReader();
+                dt.Load(rdr);
+                CatCombo.ValueMember = "CatName";
+                CatCombo.DataSource = dt;
+                //SearchCombo.ValueMember = "CatName";
+                //SearchCombo.DataSource = dt;
                 Con.Close();
             }
             catch
@@ -65,6 +90,27 @@ namespace InventoryManagement
 
             }
         }
+
+        void filterbycategory()
+        {
+            try
+            {
+                Con.Open();
+                string MyQuery = "SELECT * FROM ProductTbl WHERE ProdCat='"+SearchCombo.SelectedValue.ToString()+"'";
+                SqlDataAdapter da = new SqlDataAdapter(MyQuery, Con);
+                SqlCommandBuilder builder = new SqlCommandBuilder(da);
+                var ds = new DataSet();
+                da.Fill(ds);
+                ProductsGv.DataSource = ds.Tables[0];
+                Con.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -152,6 +198,26 @@ namespace InventoryManagement
             {
 
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            filterbycategory();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            populate();
         }
     }
 }
