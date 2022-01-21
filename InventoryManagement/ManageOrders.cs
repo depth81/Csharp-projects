@@ -81,10 +81,21 @@ namespace InventoryManagement
             }
         }
 
+        void updateproduct()
+        {
+            Con.Open();
+            int id = Convert.ToInt32(ProductsGv.SelectedRows[0].Cells[0].Value.ToString()); 
+            int newQty = stock - Convert.ToInt32(QtyTb.Text);
+            string query = "UPDATE ProductTbl set ProdQty = " + newQty + " WHERE ProdId = " + id + ";";
+            SqlCommand cmd = new SqlCommand(query,Con);
+            cmd.ExecuteNonQuery();
+            Con.Close();
+            populateproducts();
+        }
+
         int num = 0;
         int uprice, totprice, qty;
         string product;
-
 
         private void ManageOrders_Load(object sender, EventArgs e)
         {
@@ -97,11 +108,11 @@ namespace InventoryManagement
         private void CustomersGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            CustIdTb.Text = CustomersGV.SelectedRows[0].Cells[0].Value.ToString();
+           CustNameTb.Text = CustomersGV.SelectedRows[0].Cells[1].Value.ToString();
 
         }
 
         
-
         private void label3_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -137,7 +148,8 @@ namespace InventoryManagement
         }
 
         int flag = 0;
-        
+        int sum = 0;
+        int stock;
 
         private void ProductsGv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -146,9 +158,8 @@ namespace InventoryManagement
                 if (ProductsGv.SelectedRows.Count > 0)
                 {
                     product = ProductsGv.SelectedRows[0].Cells[1].Value.ToString();
-                    //qty = Convert.ToInt32(QtyTb.Text);
+                    stock = Convert.ToInt32(ProductsGv.SelectedRows[0].Cells[2].Value.ToString());
                     uprice = Convert.ToInt32(ProductsGv.SelectedRows[0].Cells[3].Value.ToString());
-                    //totprice = qty * uprice;
                     flag = 1;
                 }
                 else
@@ -166,15 +177,59 @@ namespace InventoryManagement
         }
 
         DataTable table = new DataTable();
-        
+
+        private void totAmTb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(OrderIdTb.Text == "" || CustIdTb.Text == "" || CustNameTb.Text == "" || TotAmount.Text == "")
+            {
+                MessageBox.Show("Please fill the data correctly");
+            }
+            else if(OrderIdTb.Text == "OrderId")
+            {
+                MessageBox.Show("Insert an order id");
+            }
+            else
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO OrderTbl VALUES('" + OrderIdTb.Text + "','" + CustIdTb.Text + "','" + CustNameTb.Text + "','" + Convert.ToDateTime(orderdate.Text) + "', '" + Convert.ToInt32(label7.Text) + "');", Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Order succesfully added");
+                Con.Close();
+                //populate();
+                try
+                {
+
+                }
+                catch
+                {
+
+                }
+  
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (QtyTb.Text == ""){
                 MessageBox.Show("Enter the quantity of products");
             }
             else if(flag == 0)
             {
                 MessageBox.Show("Select the product");
+            }
+            else if(Convert.ToInt32(QtyTb.Text) > stock){
+                MessageBox.Show("Not enough stock available");
             }
             else
             {
@@ -194,6 +249,10 @@ namespace InventoryManagement
                 OrderGv.DataSource = table;
                 flag = 0;
             }
+
+            sum = sum + totprice;
+            label7.Text = sum.ToString();
+            updateproduct();
         }
 
         private void ProdIdTb_TextChanged(object sender, EventArgs e)

@@ -38,7 +38,7 @@ namespace InventoryManagement
             this.label4 = new System.Windows.Forms.Label();
             this.OrderIdTb = new System.Windows.Forms.TextBox();
             this.CustIdTb = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.orderdate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.ProductsGv = new System.Windows.Forms.DataGridView();
             this.SearchCombo = new System.Windows.Forms.ComboBox();
@@ -47,6 +47,10 @@ namespace InventoryManagement
             this.button1 = new System.Windows.Forms.Button();
             this.OrderGv = new System.Windows.Forms.DataGridView();
             this.CustNameTb = new System.Windows.Forms.TextBox();
+            this.TotAmount = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGv)).BeginInit();
@@ -136,7 +140,7 @@ namespace InventoryManagement
             // 
             this.OrderIdTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.OrderIdTb.ForeColor = System.Drawing.Color.Crimson;
-            this.OrderIdTb.Location = new System.Drawing.Point(327, 134);
+            this.OrderIdTb.Location = new System.Drawing.Point(324, 112);
             this.OrderIdTb.Name = "OrderIdTb";
             this.OrderIdTb.Size = new System.Drawing.Size(243, 27);
             this.OrderIdTb.TabIndex = 34;
@@ -146,27 +150,27 @@ namespace InventoryManagement
             // 
             this.CustIdTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.CustIdTb.ForeColor = System.Drawing.Color.Crimson;
-            this.CustIdTb.Location = new System.Drawing.Point(327, 167);
+            this.CustIdTb.Location = new System.Drawing.Point(324, 145);
             this.CustIdTb.Name = "CustIdTb";
             this.CustIdTb.Size = new System.Drawing.Size(243, 27);
             this.CustIdTb.TabIndex = 35;
             this.CustIdTb.Text = "CustomerId";
             // 
-            // dateTimePicker1
+            // orderdate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Location = new System.Drawing.Point(327, 261);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker1.TabIndex = 36;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.orderdate.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.orderdate.Location = new System.Drawing.Point(324, 240);
+            this.orderdate.Name = "orderdate";
+            this.orderdate.Size = new System.Drawing.Size(200, 25);
+            this.orderdate.TabIndex = 36;
+            this.orderdate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(327, 239);
+            this.label5.Location = new System.Drawing.Point(324, 218);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 19);
             this.label5.TabIndex = 37;
@@ -180,7 +184,7 @@ namespace InventoryManagement
             this.ProductsGv.Location = new System.Drawing.Point(12, 345);
             this.ProductsGv.Name = "ProductsGv";
             this.ProductsGv.RowTemplate.Height = 25;
-            this.ProductsGv.Size = new System.Drawing.Size(295, 169);
+            this.ProductsGv.Size = new System.Drawing.Size(295, 120);
             this.ProductsGv.TabIndex = 38;
             this.ProductsGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGv_CellContentClick);
             this.ProductsGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGv_CellContentClick);
@@ -202,7 +206,7 @@ namespace InventoryManagement
             // 
             this.QtyTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.QtyTb.ForeColor = System.Drawing.Color.Crimson;
-            this.QtyTb.Location = new System.Drawing.Point(327, 320);
+            this.QtyTb.Location = new System.Drawing.Point(327, 299);
             this.QtyTb.Name = "QtyTb";
             this.QtyTb.Size = new System.Drawing.Size(101, 27);
             this.QtyTb.TabIndex = 40;
@@ -213,7 +217,7 @@ namespace InventoryManagement
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(327, 298);
+            this.label6.Location = new System.Drawing.Point(324, 277);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 19);
             this.label6.TabIndex = 41;
@@ -226,7 +230,7 @@ namespace InventoryManagement
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(434, 312);
+            this.button1.Location = new System.Drawing.Point(431, 291);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 36);
             this.button1.TabIndex = 42;
@@ -239,27 +243,80 @@ namespace InventoryManagement
             this.OrderGv.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.OrderGv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.OrderGv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrderGv.Location = new System.Drawing.Point(327, 351);
+            this.OrderGv.Location = new System.Drawing.Point(327, 345);
             this.OrderGv.Name = "OrderGv";
             this.OrderGv.RowTemplate.Height = 25;
-            this.OrderGv.Size = new System.Drawing.Size(322, 162);
+            this.OrderGv.Size = new System.Drawing.Size(322, 146);
             this.OrderGv.TabIndex = 43;
             // 
             // CustNameTb
             // 
             this.CustNameTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.CustNameTb.ForeColor = System.Drawing.Color.Crimson;
-            this.CustNameTb.Location = new System.Drawing.Point(327, 200);
+            this.CustNameTb.Location = new System.Drawing.Point(324, 178);
             this.CustNameTb.Name = "CustNameTb";
             this.CustNameTb.Size = new System.Drawing.Size(243, 27);
             this.CustNameTb.TabIndex = 44;
             this.CustNameTb.Text = "CustomerName";
+            // 
+            // TotAmount
+            // 
+            this.TotAmount.AutoSize = true;
+            this.TotAmount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TotAmount.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.TotAmount.Location = new System.Drawing.Point(420, 494);
+            this.TotAmount.Name = "TotAmount";
+            this.TotAmount.Size = new System.Drawing.Size(111, 19);
+            this.TotAmount.TabIndex = 45;
+            this.TotAmount.Text = "Total Amount";
+            this.TotAmount.Click += new System.EventHandler(this.totAmTb_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(12, 471);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 36);
+            this.button2.TabIndex = 46;
+            this.button2.Text = "Insert Order";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(171, 471);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 36);
+            this.button3.TabIndex = 47;
+            this.button3.Text = "View Orders";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label7.Location = new System.Drawing.Point(537, 494);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 19);
+            this.label7.TabIndex = 48;
             // 
             // ManageOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 541);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.TotAmount);
             this.Controls.Add(this.CustNameTb);
             this.Controls.Add(this.OrderGv);
             this.Controls.Add(this.button1);
@@ -268,7 +325,7 @@ namespace InventoryManagement
             this.Controls.Add(this.SearchCombo);
             this.Controls.Add(this.ProductsGv);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.orderdate);
             this.Controls.Add(this.CustIdTb);
             this.Controls.Add(this.OrderIdTb);
             this.Controls.Add(this.label4);
@@ -301,7 +358,7 @@ namespace InventoryManagement
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox OrderIdTb;
         private System.Windows.Forms.TextBox CustIdTb;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker orderdate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView ProductsGv;
         private System.Windows.Forms.ComboBox SearchCombo;
@@ -310,5 +367,9 @@ namespace InventoryManagement
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView OrderGv;
         private System.Windows.Forms.TextBox CustNameTb;
+        private System.Windows.Forms.Label TotAmount;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label7;
     }
 }
