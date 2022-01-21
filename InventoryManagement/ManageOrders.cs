@@ -196,7 +196,7 @@ namespace InventoryManagement
             else
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO OrderTbl VALUES('" + OrderIdTb.Text + "','" + CustIdTb.Text + "','" + CustNameTb.Text + "','" + Convert.ToDateTime(orderdate.Text) + "', '" + Convert.ToInt32(label7.Text) + "');", Con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO OrderTbl VALUES('" + OrderIdTb.Text + "','" + CustIdTb.Text + "','" + CustNameTb.Text + "','" + Convert.ToDateTime(orderdate.Text) + "', '" + Convert.ToInt32(TotAmount.Text) + "');", Con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Order succesfully added");
                 Con.Close();
@@ -251,7 +251,7 @@ namespace InventoryManagement
             }
 
             sum = sum + totprice;
-            label7.Text = sum.ToString();
+            TotAmount.Text = sum.ToString();
             updateproduct();
         }
 

@@ -47,10 +47,13 @@ namespace InventoryManagement
             this.button1 = new System.Windows.Forms.Button();
             this.OrderGv = new System.Windows.Forms.DataGridView();
             this.CustNameTb = new System.Windows.Forms.TextBox();
-            this.TotAmount = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Amount = new System.Windows.Forms.Label();
+            this.TotAmount = new System.Windows.Forms.Label();
+            this.totPriceLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGv)).BeginInit();
@@ -259,18 +262,6 @@ namespace InventoryManagement
             this.CustNameTb.TabIndex = 44;
             this.CustNameTb.Text = "CustomerName";
             // 
-            // TotAmount
-            // 
-            this.TotAmount.AutoSize = true;
-            this.TotAmount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TotAmount.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.TotAmount.Location = new System.Drawing.Point(420, 494);
-            this.TotAmount.Name = "TotAmount";
-            this.TotAmount.Size = new System.Drawing.Size(111, 19);
-            this.TotAmount.TabIndex = 45;
-            this.TotAmount.Text = "Total Amount";
-            this.TotAmount.Click += new System.EventHandler(this.totAmTb_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Crimson;
@@ -308,11 +299,57 @@ namespace InventoryManagement
             this.label7.Size = new System.Drawing.Size(0, 19);
             this.label7.TabIndex = 48;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label8.Location = new System.Drawing.Point(537, 494);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 19);
+            this.label8.TabIndex = 49;
+            // 
+            // Amount
+            // 
+            this.Amount.AutoSize = true;
+            this.Amount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Amount.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Amount.Location = new System.Drawing.Point(578, 494);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(0, 19);
+            this.Amount.TabIndex = 50;
+            // 
+            // TotAmount
+            // 
+            this.TotAmount.AutoSize = true;
+            this.TotAmount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TotAmount.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.TotAmount.Location = new System.Drawing.Point(566, 498);
+            this.TotAmount.Name = "TotAmount";
+            this.TotAmount.Size = new System.Drawing.Size(42, 19);
+            this.TotAmount.TabIndex = 45;
+            this.TotAmount.Text = "total";
+            this.TotAmount.Click += new System.EventHandler(this.totAmTb_Click);
+            // 
+            // totPriceLbl
+            // 
+            this.totPriceLbl.AutoSize = true;
+            this.totPriceLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.totPriceLbl.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.totPriceLbl.Location = new System.Drawing.Point(471, 498);
+            this.totPriceLbl.Name = "totPriceLbl";
+            this.totPriceLbl.Size = new System.Drawing.Size(91, 19);
+            this.totPriceLbl.TabIndex = 51;
+            this.totPriceLbl.Text = "total (USD):";
+            // 
             // ManageOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 541);
+            this.Controls.Add(this.totPriceLbl);
+            this.Controls.Add(this.Amount);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -367,9 +404,12 @@ namespace InventoryManagement
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView OrderGv;
         private System.Windows.Forms.TextBox CustNameTb;
-        private System.Windows.Forms.Label TotAmount;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Amount;
+        private System.Windows.Forms.Label TotAmount;
+        private System.Windows.Forms.Label totPriceLbl;
     }
 }
