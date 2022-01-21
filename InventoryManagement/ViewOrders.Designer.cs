@@ -29,10 +29,13 @@ namespace InventoryManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewOrders));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.OrderGv = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGv)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +72,8 @@ namespace InventoryManagement
             this.OrderGv.RowTemplate.Height = 25;
             this.OrderGv.Size = new System.Drawing.Size(569, 322);
             this.OrderGv.TabIndex = 44;
+            this.OrderGv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrderGv_CellContentClick);
+            this.OrderGv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrderGv_CellContentClick);
             // 
             // button3
             // 
@@ -83,6 +88,17 @@ namespace InventoryManagement
             this.button3.Text = "back";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // ViewOrders
             // 
@@ -109,5 +125,7 @@ namespace InventoryManagement
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView OrderGv;
         private System.Windows.Forms.Button button3;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

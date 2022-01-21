@@ -101,7 +101,12 @@ namespace InventoryManagement
                 SqlDataAdapter sda1 = new SqlDataAdapter("SELECT SUM(TotalAmt) FROM OrderTbl WHERE CustId = " + CustomerIDTb.Text + "", Con);
                 DataTable dt1 = new DataTable();
                 sda1.Fill(dt1);
-                OrderLabel.Text = dt.Rows[0][0].ToString();
+                AmountLabel.Text = dt1.Rows[0][0].ToString();
+
+                SqlDataAdapter sda2 = new SqlDataAdapter("SELECT MAX(OrderDate) FROM OrderTbl WHERE CustId = " + CustomerIDTb.Text + "", Con);
+                DataTable dt2 = new DataTable();
+                sda2.Fill(dt2);
+                DateLabel.Text = dt2.Rows[0][0].ToString();
 
                 Con.Close();
             }

@@ -49,14 +49,14 @@ namespace InventoryManagement
             this.Amount = new System.Windows.Forms.Panel();
             this.AmountLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Panel10 = new System.Windows.Forms.Panel();
+            this.DateLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).BeginInit();
             this.panel3.SuspendLayout();
             this.Amount.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.Panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -288,26 +288,26 @@ namespace InventoryManagement
             this.label8.TabIndex = 2;
             this.label8.Text = "Orders Amount";
             // 
-            // panel5
+            // Panel10
             // 
-            this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Location = new System.Drawing.Point(475, 428);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(165, 76);
-            this.panel5.TabIndex = 21;
+            this.Panel10.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Panel10.Controls.Add(this.DateLabel);
+            this.Panel10.Controls.Add(this.label10);
+            this.Panel10.Location = new System.Drawing.Point(475, 428);
+            this.Panel10.Name = "Panel10";
+            this.Panel10.Size = new System.Drawing.Size(165, 76);
+            this.Panel10.TabIndex = 21;
             // 
-            // label9
+            // DateLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(49, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 23);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Date";
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DateLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.DateLabel.Location = new System.Drawing.Point(49, 33);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(54, 23);
+            this.DateLabel.TabIndex = 3;
+            this.DateLabel.Text = "Date";
             // 
             // label10
             // 
@@ -325,7 +325,7 @@ namespace InventoryManagement
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 541);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.Panel10);
             this.Controls.Add(this.Amount);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -351,8 +351,8 @@ namespace InventoryManagement
             this.panel3.PerformLayout();
             this.Amount.ResumeLayout(false);
             this.Amount.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.Panel10.ResumeLayout(false);
+            this.Panel10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,8 +380,9 @@ namespace InventoryManagement
         private System.Windows.Forms.Panel Amount;
         private System.Windows.Forms.Label AmountLabel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel Panel10;
+        private System.Windows.Forms.Label DateLabel;
     }
 }
