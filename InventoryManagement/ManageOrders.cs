@@ -83,14 +83,21 @@ namespace InventoryManagement
 
         void updateproduct()
         {
-            Con.Open();
+            
             int id = Convert.ToInt32(ProductsGv.SelectedRows[0].Cells[0].Value.ToString()); 
             int newQty = stock - Convert.ToInt32(QtyTb.Text);
-            string query = "UPDATE ProductTbl set ProdQty = " + newQty + " WHERE ProdId = " + id + ";";
-            SqlCommand cmd = new SqlCommand(query,Con);
-            cmd.ExecuteNonQuery();
-            Con.Close();
-            populateproducts();
+            if (newQty < 0)
+                MessageBox.Show("Operation failed");
+            else
+            {
+                Con.Open();
+                string query = "UPDATE ProductTbl set ProdQty = " + newQty + " WHERE ProdId = " + id + ";";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                Con.Close();
+                populateproducts();
+            }
+            
         }
 
         int num = 0;
@@ -218,6 +225,13 @@ namespace InventoryManagement
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ViewOrders view = new ViewOrders();
+            view.Show();
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -260,4 +274,5 @@ namespace InventoryManagement
 
         }
     }
+
 }

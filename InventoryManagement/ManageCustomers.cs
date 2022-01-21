@@ -84,25 +84,28 @@ namespace InventoryManagement
 
         private void CustomersGv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+           
+            if (CustomersGv.SelectedRows.Count > 0)
             {
-                if (CustomersGv.SelectedRows.Count > 0)
-                {
-                    CustomerIDTb.Text = CustomersGv.SelectedRows[0].Cells[0].Value.ToString();
-                    CustomerNameTb.Text = CustomersGv.SelectedRows[0].Cells[1].Value.ToString();
-                    CustomerPhoneTb.Text = CustomersGv.SelectedRows[0].Cells[2].Value.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("No rows selected");
-                }
+                CustomerIDTb.Text = CustomersGv.SelectedRows[0].Cells[0].Value.ToString();
+                CustomerNameTb.Text = CustomersGv.SelectedRows[0].Cells[1].Value.ToString();
+                CustomerPhoneTb.Text = CustomersGv.SelectedRows[0].Cells[2].Value.ToString();
+                
+                Con.Open();
+                
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM OrderTbl WHERE CustId = " + CustomerIDTb.Text + "", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                OrderLabel.Text = dt.Rows[0][0].ToString();
 
-            }
-            catch (Exception ex)
-            {
+                SqlDataAdapter sda1 = new SqlDataAdapter("SELECT SUM(TotalAmt) FROM OrderTbl WHERE CustId = " + CustomerIDTb.Text + "", Con);
+                DataTable dt1 = new DataTable();
+                sda1.Fill(dt1);
+                OrderLabel.Text = dt.Rows[0][0].ToString();
 
-                throw ex;
+                Con.Close();
             }
+          
         }
 
         private void button2_Click(object sender, EventArgs e)

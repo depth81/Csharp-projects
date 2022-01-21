@@ -44,10 +44,10 @@ namespace InventoryManagement
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.OrderLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Amount = new System.Windows.Forms.Panel();
+            this.AmountLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@ namespace InventoryManagement
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.Amount.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -227,12 +227,23 @@ namespace InventoryManagement
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Violet;
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.OrderLabel);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(17, 428);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(163, 76);
             this.panel3.TabIndex = 19;
+            // 
+            // OrderLabel
+            // 
+            this.OrderLabel.AutoSize = true;
+            this.OrderLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.OrderLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OrderLabel.Location = new System.Drawing.Point(45, 33);
+            this.OrderLabel.Name = "OrderLabel";
+            this.OrderLabel.Size = new System.Drawing.Size(71, 23);
+            this.OrderLabel.TabIndex = 3;
+            this.OrderLabel.Text = "Orders";
             // 
             // label5
             // 
@@ -245,37 +256,26 @@ namespace InventoryManagement
             this.label5.TabIndex = 2;
             this.label5.Text = "Orders Count";
             // 
-            // label6
+            // Amount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(45, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 23);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Orders";
+            this.Amount.BackColor = System.Drawing.Color.DarkGreen;
+            this.Amount.Controls.Add(this.AmountLabel);
+            this.Amount.Controls.Add(this.label8);
+            this.Amount.Location = new System.Drawing.Point(301, 428);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(165, 76);
+            this.Amount.TabIndex = 20;
             // 
-            // panel4
+            // AmountLabel
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(301, 428);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(165, 76);
-            this.panel4.TabIndex = 20;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(49, 33);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 23);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Amount";
+            this.AmountLabel.AutoSize = true;
+            this.AmountLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AmountLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AmountLabel.Location = new System.Drawing.Point(49, 33);
+            this.AmountLabel.Name = "AmountLabel";
+            this.AmountLabel.Size = new System.Drawing.Size(82, 23);
+            this.AmountLabel.TabIndex = 3;
+            this.AmountLabel.Text = "Amount";
             // 
             // label8
             // 
@@ -326,7 +326,7 @@ namespace InventoryManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 541);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.Amount);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button4);
@@ -349,8 +349,8 @@ namespace InventoryManagement
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGv)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.Amount.ResumeLayout(false);
+            this.Amount.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -375,10 +375,10 @@ namespace InventoryManagement
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label OrderLabel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel Amount;
+        private System.Windows.Forms.Label AmountLabel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;

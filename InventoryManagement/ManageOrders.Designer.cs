@@ -54,6 +54,7 @@ namespace InventoryManagement
             this.Amount = new System.Windows.Forms.Label();
             this.TotAmount = new System.Windows.Forms.Label();
             this.totPriceLbl = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGv)).BeginInit();
@@ -120,7 +121,7 @@ namespace InventoryManagement
             this.CustomersGV.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.CustomersGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.CustomersGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomersGV.Location = new System.Drawing.Point(12, 134);
+            this.CustomersGV.Location = new System.Drawing.Point(11, 145);
             this.CustomersGV.Name = "CustomersGV";
             this.CustomersGV.RowTemplate.Height = 25;
             this.CustomersGV.Size = new System.Drawing.Size(295, 162);
@@ -143,11 +144,10 @@ namespace InventoryManagement
             // 
             this.OrderIdTb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.OrderIdTb.ForeColor = System.Drawing.Color.Crimson;
-            this.OrderIdTb.Location = new System.Drawing.Point(324, 112);
+            this.OrderIdTb.Location = new System.Drawing.Point(384, 112);
             this.OrderIdTb.Name = "OrderIdTb";
-            this.OrderIdTb.Size = new System.Drawing.Size(243, 27);
+            this.OrderIdTb.Size = new System.Drawing.Size(235, 27);
             this.OrderIdTb.TabIndex = 34;
-            this.OrderIdTb.Text = "OrderId";
             // 
             // CustIdTb
             // 
@@ -155,9 +155,8 @@ namespace InventoryManagement
             this.CustIdTb.ForeColor = System.Drawing.Color.Crimson;
             this.CustIdTb.Location = new System.Drawing.Point(324, 145);
             this.CustIdTb.Name = "CustIdTb";
-            this.CustIdTb.Size = new System.Drawing.Size(243, 27);
+            this.CustIdTb.Size = new System.Drawing.Size(295, 27);
             this.CustIdTb.TabIndex = 35;
-            this.CustIdTb.Text = "CustomerId";
             // 
             // orderdate
             // 
@@ -199,7 +198,7 @@ namespace InventoryManagement
             this.SearchCombo.FormattingEnabled = true;
             this.SearchCombo.Location = new System.Drawing.Point(12, 312);
             this.SearchCombo.Name = "SearchCombo";
-            this.SearchCombo.Size = new System.Drawing.Size(160, 27);
+            this.SearchCombo.Size = new System.Drawing.Size(201, 27);
             this.SearchCombo.TabIndex = 39;
             this.SearchCombo.Text = "SelectCategory";
             this.SearchCombo.SelectedIndexChanged += new System.EventHandler(this.SearchCombo_SelectedIndexChanged);
@@ -211,6 +210,7 @@ namespace InventoryManagement
             this.QtyTb.ForeColor = System.Drawing.Color.Crimson;
             this.QtyTb.Location = new System.Drawing.Point(327, 299);
             this.QtyTb.Name = "QtyTb";
+            this.QtyTb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.QtyTb.Size = new System.Drawing.Size(101, 27);
             this.QtyTb.TabIndex = 40;
             this.QtyTb.TextChanged += new System.EventHandler(this.ProdIdTb_TextChanged);
@@ -258,9 +258,8 @@ namespace InventoryManagement
             this.CustNameTb.ForeColor = System.Drawing.Color.Crimson;
             this.CustNameTb.Location = new System.Drawing.Point(324, 178);
             this.CustNameTb.Name = "CustNameTb";
-            this.CustNameTb.Size = new System.Drawing.Size(243, 27);
+            this.CustNameTb.Size = new System.Drawing.Size(295, 27);
             this.CustNameTb.TabIndex = 44;
-            this.CustNameTb.Text = "CustomerName";
             // 
             // button2
             // 
@@ -288,6 +287,7 @@ namespace InventoryManagement
             this.button3.TabIndex = 47;
             this.button3.Text = "View Orders";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label7
             // 
@@ -342,11 +342,21 @@ namespace InventoryManagement
             this.totPriceLbl.TabIndex = 51;
             this.totPriceLbl.Text = "total (USD):";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(324, 116);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 15);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "OrderId";
+            // 
             // ManageOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 541);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.totPriceLbl);
             this.Controls.Add(this.Amount);
             this.Controls.Add(this.label8);
@@ -411,5 +421,6 @@ namespace InventoryManagement
         private System.Windows.Forms.Label Amount;
         private System.Windows.Forms.Label TotAmount;
         private System.Windows.Forms.Label totPriceLbl;
+        private System.Windows.Forms.Label label9;
     }
 }
