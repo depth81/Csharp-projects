@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace TrackerUI
 {
-    public partial class CreateTeam : Form
+    public partial class CreatePrizeForm : Form
     {
-        public CreateTeam()
+        public CreatePrizeForm()
         {
             InitializeComponent();
+        }
+
+        private void CreatePrize_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

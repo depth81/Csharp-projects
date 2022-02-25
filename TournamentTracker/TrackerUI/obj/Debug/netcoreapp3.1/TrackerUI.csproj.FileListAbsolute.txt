@@ -14,3 +14,7 @@ D:\softwareDev\Csharp-projects\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3
 D:\softwareDev\Csharp-projects\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.dll
 D:\softwareDev\Csharp-projects\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.pdb
 D:\softwareDev\Csharp-projects\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.genruntimeconfig.cache
+D:\softwareDev\Csharp-projects\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.CreatePrize.resources
+D:\softwareDev\Csharp-projects\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.CreateTeam.resources
+D:\softwareDev\Csharp-projects\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.CreateTournamentForm.resources
+D:\softwareDev\Csharp-projects\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.TournamentDashboardForm.resources

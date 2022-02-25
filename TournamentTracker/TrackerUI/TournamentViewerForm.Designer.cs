@@ -29,7 +29,7 @@ namespace TrackerUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.tournamentLabel = new System.Windows.Forms.Label();
             this.tournamentName = new System.Windows.Forms.Label();
             this.roundLabel = new System.Windows.Forms.Label();
             this.roundDropDown = new System.Windows.Forms.ComboBox();
@@ -45,23 +45,23 @@ namespace TrackerUI
             this.scoreButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // tournamentLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label1.Location = new System.Drawing.Point(35, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 50);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tournament";
+            this.tournamentLabel.AutoSize = true;
+            this.tournamentLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tournamentLabel.ForeColor = System.Drawing.Color.SkyBlue;
+            this.tournamentLabel.Location = new System.Drawing.Point(35, 23);
+            this.tournamentLabel.Name = "tournamentLabel";
+            this.tournamentLabel.Size = new System.Drawing.Size(206, 50);
+            this.tournamentLabel.TabIndex = 0;
+            this.tournamentLabel.Text = "Tournament";
             // 
             // tournamentName
             // 
             this.tournamentName.AutoSize = true;
             this.tournamentName.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tournamentName.ForeColor = System.Drawing.Color.SkyBlue;
-            this.tournamentName.Location = new System.Drawing.Point(224, 23);
+            this.tournamentName.Location = new System.Drawing.Point(260, 23);
             this.tournamentName.Name = "tournamentName";
             this.tournamentName.Size = new System.Drawing.Size(150, 50);
             this.tournamentName.TabIndex = 1;
@@ -189,7 +189,7 @@ namespace TrackerUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(588, 461);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.scoreButton);
             this.Controls.Add(this.versusLabel);
             this.Controls.Add(this.teamTwoScoreValue);
@@ -203,7 +203,7 @@ namespace TrackerUI
             this.Controls.Add(this.roundDropDown);
             this.Controls.Add(this.roundLabel);
             this.Controls.Add(this.tournamentName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tournamentLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "TournamentViewerForm";
@@ -215,7 +215,7 @@ namespace TrackerUI
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label tournamentLabel;
         private System.Windows.Forms.Label tournamentName;
         private System.Windows.Forms.Label roundLabel;
         private System.Windows.Forms.ComboBox roundDropDown;
