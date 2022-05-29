@@ -145,3 +145,6 @@ D:\softwareDev\Csharp-projects\CmsShoppingCart\CmsShoppingCart\obj\Debug\net5.0\
 D:\softwareDev\Csharp-projects\CmsShoppingCart\CmsShoppingCart\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 D:\softwareDev\Csharp-projects\CmsShoppingCart\CmsShoppingCart\obj\Debug\net5.0\Razor\Areas\Admin\Views\Pages\Details.cshtml.g.cs
 D:\softwareDev\Csharp-projects\CmsShoppingCart\CmsShoppingCart\obj\Debug\net5.0\Razor\Areas\Admin\Views\Pages\Create.cshtml.g.cs
+D:\softwareDev\Csharp-projects\CmsShoppingCart\CmsShoppingCart\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_NotificationPartial.cshtml.g.cs
+D:\softwareDev\Csharp-projects\CmsShoppingCart\CmsShoppingCart\obj\Debug\net5.0\Razor\Areas\Admin\Views\Pages\Edit.cshtml.g.cs
+D:\softwareDev\Csharp-projects\CmsShoppingCart\CmsShoppingCart\bin\Debug\net5.0\libman.json
